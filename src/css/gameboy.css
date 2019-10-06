@@ -829,6 +829,55 @@ hr {
     left: 40px;
 }
 
+/* X-Large D-Pad */
+.dpad-touch-target.xl {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.dpad.xl {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 150px;
+    height: 150px;
+}
+
+.dpad.xl>.element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border: 2px solid black;
+    border-top: 1px solid black;
+}
+
+.dpad.xl>.up {
+    top: 0;
+    left: 48px;
+}
+
+.dpad.xl>.down {
+    bottom: 0;
+    left: 48px;
+}
+
+.dpad.xl>.left {
+    top: 48px;
+    left: 0;
+}
+
+.dpad.xl>.right {
+    top: 48px;
+    right: 0;
+}
+
+.dpad.xl>.center {
+    top: 34%;
+    left: 50px;
+}
+
 /* GBC */
 
 #screen-console.theme-gbc .dpad > .top {
@@ -912,6 +961,25 @@ hr {
     border-radius: 100%;
     top: 8px;
     left: 8px;
+    background-image: -webkit-linear-gradient(top, #000, #888);
+    box-shadow: 0 2px 0 #ccc;
+    opacity: 0.2;
+}
+
+#screen-console.theme-gbc .dpad.xl>.center {
+    border: 0;
+    width: 50px;
+    height: 50px;
+}
+
+#screen-console.theme-gbc .dpad.xl>.center:before {
+    position: absolute;
+    height: 29px;
+    width: 29px;
+    content: "";
+    border-radius: 100%;
+    top: 10px;
+    left: 10px;
     background-image: -webkit-linear-gradient(top, #000, #888);
     box-shadow: 0 2px 0 #ccc;
     opacity: 0.2;
