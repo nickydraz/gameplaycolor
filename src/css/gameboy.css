@@ -869,21 +869,21 @@ hr {
 }
 
 /* X-Large D-Pad */
-.xl > .dpad-touch-target {
-    width: 160px;
-    height: 160px;
+.xl .dpad-touch-target {
+    width: 200px;
+    height: 200px;
     position: relative;
 }
 
-.xl > .dpad {
+.xl .dpad {
     position: absolute;
-    top: 18px;
-    left: 18px;
+    top: 60px;
+    left: 9px;
     width: 150px;
     height: 150px;
 }
 
-.xl > .dpad>.element {
+.xl .dpad>.element {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -892,27 +892,27 @@ hr {
     border-top: 1px solid black;
 }
 
-.xl>.dpad>.up {
+.xl .dpad>.up {
     top: 0;
     left: 48px;
 }
 
-.xl>.dpad>.down {
+.xl .dpad>.down {
     bottom: 0;
     left: 48px;
 }
 
-.xl>.dpad>.left {
+.xl .dpad>.left {
     top: 48px;
     left: 0;
 }
 
-.xl>.dpad>.right {
+.xl .dpad>.right {
     top: 48px;
     right: 0;
 }
 
-.xl>.dpad>.center {
+.xl .dpad>.center {
     top: 34%;
     left: 50px;
 }
@@ -1005,13 +1005,13 @@ hr {
     opacity: 0.2;
 }
 
-#screen-console.theme-gbc .xl>.dpad>.center {
+#screen-console.theme-gbc.xl .dpad>.center {
     border: 0;
     width: 50px;
     height: 50px;
 }
 
-#screen-console.theme-gbc .xl>.dpad>.center:before {
+#screen-console.theme-gbc.xl .dpad>.center:before {
     position: absolute;
     height: 29px;
     width: 29px;
