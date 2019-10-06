@@ -600,6 +600,45 @@ body {
     background-color: #FECF41;
 }
 
+/* D-Pad Size Picker */
+#d-pad-size li, #d-pad-size li:first-child, #d-pad-size li:last-child {
+    border-radius: 2px;
+    margin: 2px 4px;
+    border: 2px solid transparent;
+    width: 20px;
+    border: 0;
+}
+
+#d-pad-size li:last-child {
+    margin-right: 2px;
+}
+
+#d-pad-size li:first-child {
+    margin-left: 2px;
+}
+
+#d-pad-size li.selected, #d-pad-size li.pressed {
+    border-radius: 4px;
+    margin: 0 2px;
+}
+
+#d-pad-size li.pressed {
+    border: 2px solid #d8ecff;
+}
+
+#d-pad-size li.selected {
+    border: 2px solid #0076ff;
+}
+
+#d-pad-size li:last-child.selected, #d-pad-size li:last-child.pressed {
+    margin-right: 0;
+}
+
+#d-pad-size li:first-child.selected, #d-pad-size li:first-child.pressed {
+    margin-left: 0;
+}
+
+
 #screen-loading {
     width: 100%;
     height: 100%;
@@ -830,13 +869,13 @@ hr {
 }
 
 /* X-Large D-Pad */
-.dpad-touch-target.xl {
+.xl > .dpad-touch-target {
     width: 160px;
     height: 160px;
     position: relative;
 }
 
-.dpad.xl {
+.xl > .dpad {
     position: absolute;
     top: 18px;
     left: 18px;
@@ -844,7 +883,7 @@ hr {
     height: 150px;
 }
 
-.dpad.xl>.element {
+.xl > .dpad>.element {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -853,27 +892,27 @@ hr {
     border-top: 1px solid black;
 }
 
-.dpad.xl>.up {
+.xl>.dpad>.up {
     top: 0;
     left: 48px;
 }
 
-.dpad.xl>.down {
+.xl>.dpad>.down {
     bottom: 0;
     left: 48px;
 }
 
-.dpad.xl>.left {
+.xl>.dpad>.left {
     top: 48px;
     left: 0;
 }
 
-.dpad.xl>.right {
+.xl>.dpad>.right {
     top: 48px;
     right: 0;
 }
 
-.dpad.xl>.center {
+.xl>.dpad>.center {
     top: 34%;
     left: 50px;
 }
@@ -966,13 +1005,13 @@ hr {
     opacity: 0.2;
 }
 
-#screen-console.theme-gbc .dpad.xl>.center {
+#screen-console.theme-gbc .xl>.dpad>.center {
     border: 0;
     width: 50px;
     height: 50px;
 }
 
-#screen-console.theme-gbc .dpad.xl>.center:before {
+#screen-console.theme-gbc .xl>.dpad>.center:before {
     position: absolute;
     height: 29px;
     width: 29px;
