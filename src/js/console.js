@@ -140,6 +140,7 @@ KEYCODE_SHIFT_LEFT = 16;
       self.navigation_back.animate = false;
 
       self.restoreColor();
+      self.restoreDpadSize();
 
       self.menu = new App.Menu(
         function() {
