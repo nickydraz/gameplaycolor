@@ -3,3 +3,5 @@
 /build
 /archives
 /ansible/gameplay.retry
+
+scripts/paths.pyc
