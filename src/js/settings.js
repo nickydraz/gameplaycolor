@@ -68,19 +68,27 @@
           self.store.setProperty(App.Controller.Domain.SETTINGS, App.Store.Property.COLOR, colors[index]);
         });
 
-        // D-Pad Size
-        var dpadSizes = ["regular", "large"];
-        self.dpadSize = new App.Controls.Segmented($('#d-pad-size'), function (index) {
-          self.dpadSize.setIndex(index);
-          self.console.setDpadSize(dpadSizes[index]);
-          self.store.setProperty(App.Controller.Domain.SETTINGS, App.Store.Property.DPADSIZE, dpadSizes[index]);
-        });
-
         self.store.property(App.Controller.Domain.SETTINGS, App.Store.Property.COLOR, function(color) {
           if (color !== undefined) {
             self.color.setIndex(colors.indexOf(color));
           } else {
             self.color.setIndex(0);
+          }
+        });
+
+         // D-Pad Size
+         var dpadSizes = ["regular", "xl"];
+         self.dpadSize = new App.Controls.Segmented($('#d-pad-size'), function (index) {
+           self.dpadSize.setIndex(index);
+           self.console.setDpadSize(dpadSizes[index]);
+           self.store.setProperty(App.Controller.Domain.SETTINGS, App.Store.Property.DPADSIZE, dpadSizes[index]);
+         });
+
+         self.store.property(App.Controller.Domain.SETTINGS, App.Store.Property.DPADSIZE, function(size) {
+          if (size !== undefined) {
+            self.dpadSize.setIndex(dpadSizes.indexOf(size));
+          } else {
+            self.dpadSize.setIndex(0);
           }
         });
 
