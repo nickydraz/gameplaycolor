@@ -232,6 +232,36 @@ KEYCODE_SHIFT_LEFT = 16;
       self.color = color;
     },
 
+    restoreDpadSize: function () {
+      var self = this;
+      self.store.property(
+        App.Controller.Domain.SETTINGS,
+        App.Store.Property.DPADSIZE,
+        function (size) {
+          if (size === undefined) {
+            return;
+          }
+          self.setDpadSize(size);
+        }
+      );
+    },
+
+    setDpadSize: function(size) {
+      var self = this;
+      self.logging.info("Set D-Pad Size: " + size);
+      if (size == self.dpadSize) {
+        self.logging.info("Ignoring set to current d-pad size: " + size);
+        return;
+      }
+      
+      if (size == "xl") {
+        self.element.addClass("xl");
+      } else {
+        self.element.removeClass("xl");
+      }
+      self.dpadSize = size;
+    },
+
     pause: function() {
       var self = this;
       self.core.pause();
