@@ -25,7 +25,8 @@
     STATE: 0,
     GAME: 1,
     COLOR: 2,
-    SPEED: 4
+    SPEED: 4,
+    DPADSIZE: 5
   };
 
   jQuery.extend(App.Store.prototype, {
