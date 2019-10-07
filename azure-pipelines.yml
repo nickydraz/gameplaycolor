@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- dev
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+#
+# Run build script
+#
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: 'scripts/build'
+    arguments: 'build settings/$buildConfig'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/build'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
