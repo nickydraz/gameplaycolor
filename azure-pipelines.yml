@@ -11,12 +11,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: |
-      git submodule update --init --recursive
-      cat brew.txt | xargs brew install
-      pip install --user -r requirements.txt
+- checkout: self 
+  clean: true
+  submodules:recursive
+  persistCredentials: true
 
 #
 # Run build script
