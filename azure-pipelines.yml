@@ -15,8 +15,8 @@ steps:
 #
 - task: PythonScript@0
   inputs:
-    scriptSource: 'inline'
-    script: 'scripts/build'
+    scriptSource: 'filePath'
+    scriptPath: '/scripts/build'
     arguments: 'build settings/$buildConfig'
 - task: PublishBuildArtifacts@1
   inputs:
