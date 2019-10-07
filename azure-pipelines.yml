@@ -25,7 +25,7 @@ steps:
   inputs:
     scriptSource: 'filePath'
     scriptPath: 'scripts/build'
-    arguments: 'build settings/$buildConfig'
+    arguments: 'build settings/$(buildConfig)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/build'
