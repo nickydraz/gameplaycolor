@@ -3,6 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
 trigger:
 - dev
 
@@ -10,6 +11,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: |
+      git submodule update --init --recursive
+      cat brew.txt | xargs brew install
+      pip install --user -r requirements.txt
+
 #
 # Run build script
 #
