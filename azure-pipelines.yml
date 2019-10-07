@@ -13,7 +13,7 @@ pool:
 steps:
 - checkout: self 
   clean: true
-  submodules:recursive
+  submodules: recursive
   persistCredentials: true
 
 #
